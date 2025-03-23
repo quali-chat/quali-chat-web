@@ -136,13 +136,8 @@ For a developer guide, see the [translating dev doc](docs/translating-dev.md).
 Copyright (c) 2014-2017 OpenMarket Ltd. <br>
 Copyright (c) 2017 Vector Creations Ltd. <br>
 Copyright (c) 2017-2025 New Vector Ltd. <br>
-Copyright (c) 2025 Keypair Establishment. <br>
+Copyright (c) 2025 Keypair Establishment.
 
-SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial <br>
-Please see LICENSE files in the repository root for full details.
+This fork is a customized version of [Element Web](https://github.com/element-hq/element-web), rebranded and modified as quali.chat web by Keypair Establishment and licensed under the GNU Affero General Public License (as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version).
 
-This repository is a customized version of Element Web, rebranded and modified as **quali.chat** by Keypair Establishment. <br>
-Modifications include branding, new features, and architectural changes.
-
-Original source: https://github.com/element-hq/element-web <br>
-Modifications: © 2025 Keypair Establishment – https://quali.chat
+Unless required by applicable law or agreed to in writing, software distributed under the Licenses is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Licenses for the specific language governing permissions and limitations under the Licenses.
