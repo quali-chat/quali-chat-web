@@ -23,6 +23,9 @@ module.exports = {
         "no-async-promise-executor": "off",
         "no-extra-boolean-cast": "off",
 
+        // Disable unused variables check
+        "@typescript-eslint/no-unused-vars": "off",
+
         // Bind or arrow functions in props causes performance issues (but we
         // currently use them in some places).
         // It's disabled here, but we should using it sparingly.
