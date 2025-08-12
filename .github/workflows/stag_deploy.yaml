@@ -1,0 +1,26 @@
+name: Staging deploy
+on:
+  workflow_dispatch:
+    inputs:
+      VERSION:
+        description: "Version to deploy to staging"
+        default: "develop"
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      VERSION:
+        description: "Version to deploy to staging"
+        default: "develop"
+        required: false
+        type: string
+jobs:
+  call_deploy:
+    name: Call Deploy stag via ssh
+    uses: ./.github/workflows/ssh_deploy.yaml
+    with:
+      VERSION: ${{ inputs.VERSION }}
+    secrets:
+      DEPLOY_HOST: "${{ secrets.STAG_DEPLOY_HOST }}"
+      DEPLOY_USERNAME: "${{ secrets.STAG_DEPLOY_USERNAME }}"
+      DEPLOY_KEY: "${{ secrets.STAG_DEPLOY_KEY }}"
