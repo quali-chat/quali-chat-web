@@ -51,7 +51,7 @@ import { useAsyncMemo } from "../../../../hooks/useAsyncMemo";
 import { verifyUser } from "../../../../verification";
 import { Action } from "../../../../dispatcher/actions";
 import { useIsEncrypted } from "../../../../hooks/useIsEncrypted";
-import BaseCard from "../../../../components/views/dialogs/BaseDialog";
+import BaseCard from "../../../../components/views/right_panel/BaseCard";
 import ImageView from "../../../../components/views/elements/ImageView";
 import Spinner from "../../../../components/views/elements/Spinner";
 import MemberAvatar from "../../../../components/views/avatars/MemberAvatar";
