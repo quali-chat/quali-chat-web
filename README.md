@@ -1,10 +1,34 @@
 # quali-chat-web
 
-The [quali.chat](https://app.quali.chat) web client provides a web interface for token-gated community chats, supporting verified token holders across multiple blockchains.
-
-## Getting Started
-
+The [quali.chat](https://app.quali.chat) web client is a React/TypeScript Matrix client that implements token‑gated access control.
 The easiest way to get started with quali.chat is to just use the hosted copy at <https://app.quali.chat>.
+
+## Building From Source
+
+Ensure you have the latest LTS version of Node.js installed.
+
+Using `yarn` instead of `npm` is recommended. Please see the Yarn [install
+guide](https://classic.yarnpkg.com/en/docs/install) if you do not have it already.
+
+1. Install or update `node.js` so that your `node` is at least the current recommended LTS.
+1. Install `yarn` if not present already.
+1. Clone the repo: `git clone https://github.com/quali-chat/quali-chat-web.git`.
+1. Switch to the quali-chat-web directory: `cd quali-chat-web`.
+1. Install the prerequisites: `yarn install`.
+    - If you're using the `develop` branch, then it is recommended to set up a
+      proper development environment (see [Setting up a dev
+      environment](./developer_guide.md#setting-up-a-dev-environment) below)
+1. Configure the app by copying `config.sample.json` to `config.json` and
+   modifying it. See the [configuration docs](docs/config.md) for details.
+1. `yarn dist` to build a tarball to deploy. Untaring this file will give
+   a version-specific directory containing all the files that need to go on your
+   web server.
+
+Note that `yarn dist` is not supported on Windows, so Windows users can run `yarn build`,
+which will build all the necessary files into the `webapp` directory. The version of quali.chat web
+will not appear in Settings without using the dist script. You can then mount the
+`webapp` directory on your web server to actually serve up the app, which is
+entirely static content.
 
 ## Important Security Notes
 
@@ -62,33 +86,7 @@ Note: In case you are already setting a `Content-Security-Policy` header
 elsewhere, you should modify it to include the `frame-ancestors` directive
 instead of adding that last line.
 
-## Building From Source
 
-quali.chat is a modular webapp built with modern ES6 and uses a Node.js build system.
-Ensure you have the latest LTS version of Node.js installed.
-
-Using `yarn` instead of `npm` is recommended. Please see the Yarn [install
-guide](https://classic.yarnpkg.com/en/docs/install) if you do not have it already.
-
-1. Install or update `node.js` so that your `node` is at least the current recommended LTS.
-1. Install `yarn` if not present already.
-1. Clone the repo: `git clone https://github.com/quali-chat/quali-chat-web.git`.
-1. Switch to the quali-chat-web directory: `cd quali-chat-web`.
-1. Install the prerequisites: `yarn install`.
-    - If you're using the `develop` branch, then it is recommended to set up a
-      proper development environment (see [Setting up a dev
-      environment](./developer_guide.md#setting-up-a-dev-environment) below)
-1. Configure the app by copying `config.sample.json` to `config.json` and
-   modifying it. See the [configuration docs](docs/config.md) for details.
-1. `yarn dist` to build a tarball to deploy. Untaring this file will give
-   a version-specific directory containing all the files that need to go on your
-   web server.
-
-Note that `yarn dist` is not supported on Windows, so Windows users can run `yarn build`,
-which will build all the necessary files into the `webapp` directory. The version of quali.chat web
-will not appear in Settings without using the dist script. You can then mount the
-`webapp` directory on your web server to actually serve up the app, which is
-entirely static content.
 
 ## config.json
 
